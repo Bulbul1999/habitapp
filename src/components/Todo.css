@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,900&family=Poppins:ital,wght@1,900&display=swap');
+.App {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: rgb(239, 239, 190);
+}
+/* body{
+  background-color: rgb(219, 219, 154);
+} */
+.homeTitle{
+  
+    margin-top: 3%;
+    font-size: 1rem;
+    margin-left: 15%;
+  }
+.subTitle{
+    font-size: 3rem;
+    color: black;
+    text-shadow: 2px 2px 3px white;
+}
+label{
+  font-weight: bold;
+}
+.main-div{
+  border-style: groove;
+  border-color:  black;
+  margin-left: 12%;
+  margin-right: 12%;
+  background-color: pink;
+}
+.fa-solid:hover{
+  cursor: pointer;
+}
+.details{
+  width:100%;
+}
+
+button{
+  align-items: center;
+  background-color: rgb(112, 176, 232);
+  justify-content: center;
+  margin-left: 70px;
+  color:black;
+  margin-bottom: 5px;
+}

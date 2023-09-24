@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,900&family=Poppins:ital,wght@1,900&display=swap');
+.App {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+body{
+  /* background-image: linear-gradient(to right, #200122,#6f0000); */
+  background-color: rgb(245, 245, 188);
+}
+.Title{
+  font-size: 3rem;
+    color: black;
+    text-shadow: 2px 2px 3px black;
+}
+.subtitle {
+  margin-left: 40%;
+}
+table {
+  width: 100%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+.taskname {
+  width: 100%;
+  background-color: rgb(242, 154, 154);
+}
+.fa-regular {
+  margin: 2%;
+  /* background-color: blue;
+  color: white;
+  border-radius: 7px; */
+}
+.fa-brands {
+  margin: 2%;
+}
+table {
+  text-align: center;
+}
+.div {
+  width: 100%;
+  margin-right: 10%;
+}
+.details {
+  display: inline-block;
+  width: 100%;
+}
+.tableTitle{
+  font-size: large;
+
+}
+

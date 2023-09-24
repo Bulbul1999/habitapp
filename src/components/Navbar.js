@@ -1,124 +1,40 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import AddHabit from "../images/addhabit.png";
-import { addHabit } from "../redux/features/habitSlice";
+import React from 'react';
+import Details from './Details';
+import Todo from './Todo';
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
+import './navbar.css';
 
-const Navbar = ({ name }) => {
-  // call use dispatch hook a variable call dispatch
-  const dispatch = useDispatch();
-
-  // change state acording time
-  const [hour, setHour] = useState(0);
-  useEffect(() => {
-    const date = new Date();
-    setHour(date.getHours());
-  }, []);
-
-  // function for add habit
-  const handleSave = () => {
-    const habitName = document.getElementById("habitName").value;
-    dispatch(addHabit(habitName));
-    alert("Your habit added successfully");
-    document.getElementById("habitName").value = "";
-  };
-
+const Navbar = () => {
   return (
-    <>
-      <div className="navbar">
-        {/* according to time it shows morning, afternoon, evening, and night */}
-        {hour <= 12 ? (
-          <div>
-            Good morning!
-            <br />
-            Seize the day and master your habits.
-          </div>
-        ) : hour <= 17 ? (
-          <div>
-            Afternoon alert!
-            <br />
-            Stay on track with your habits.
-          </div>
-        ) : hour <= 21 ? (
-          <div>
-            Good evening!
-            <br />
-            Elevate your habits and conquer the day.
-          </div>
-        ) : (
-          <div>
-            Nighttime focus!
-            <br />
-            Reflect and level up your habits.
-          </div>
-        )}
+    // for creating navbar
+    <Router>
+      <div>
+        <nav className="navbar navbar-expand-lg" id="my-navbar">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="/home">Habit Tracker</Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-        <div className="right-nav">
-          <div className="navbar-addhabit">
-            <img src={AddHabit} alt="addhabit" />
-          </div>
-          <button
-            className="addhabit-btn"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
-          >
-            <i className="fa-solid fa-plus"></i> Add Habits
-          </button>
-        </div>
-      </div>
-
-      {/* modal for add habit form */}
-      <div
-        className="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="staticBackdropLabel">
-                Add your habit and keep a track;)
-              </h5>
-            </div>
-            <div className="modal-body">
-              <div className="mb-3">
-                <label
-                  htmlFor="exampleInputEmail1"
-                  className="form-label"
-                ></label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="habitName"
-                  placeholder="Enter habit name"
-                  autoComplete="off"
-                />
-              </div>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleSave}
-              >
-                Save
-              </button>
+            {/* two list for linkng to detILA PAGE AND HOME PAGE */}
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav ms-auto me-0 mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className="nav-link fs-5" aria-current="page" to="/home">Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link fs-5" to="/Details">Details</Link>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
+        </nav>
+        <Routes>
+          <Route exact path="/Details" element={<Details />} />
+          <Route path="/home" element={<Todo />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 };
 
