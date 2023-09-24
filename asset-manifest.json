@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/habitapp/static/css/main.afc9f74f.css",
-    "main.js": "/habitapp/static/js/main.b23de54e.js",
-    "static/media/CenterImage.jpg": "/habitapp/static/media/CenterImage.9ecf27257e43ba3db1cd.jpg",
-    "static/media/addhabit.png": "/habitapp/static/media/addhabit.3b76965cac2016f486a9.png",
+    "main.css": "/habitapp/static/css/main.d6bd839a.css",
+    "main.js": "/habitapp/static/js/main.6758e094.js",
     "index.html": "/habitapp/index.html",
-    "main.afc9f74f.css.map": "/habitapp/static/css/main.afc9f74f.css.map",
-    "main.b23de54e.js.map": "/habitapp/static/js/main.b23de54e.js.map"
+    "main.d6bd839a.css.map": "/habitapp/static/css/main.d6bd839a.css.map",
+    "main.6758e094.js.map": "/habitapp/static/js/main.6758e094.js.map"
   },
   "entrypoints": [
-    "static/css/main.afc9f74f.css",
-    "static/js/main.b23de54e.js"
+    "static/css/main.d6bd839a.css",
+    "static/js/main.6758e094.js"
   ]
 }
